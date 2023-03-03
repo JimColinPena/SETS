@@ -1,0 +1,130 @@
+/* The side navigation menu */
+
+div.container{
+  width: 100%;
+  position: fixed;
+  /*margin-top: 122px;*/
+  margin-bottom: 50px;
+  height: 100%;
+  /*overflow-y: scroll;*/
+}
+
+nav.navbar{
+  position: fixed;
+  height: 112px;
+  width: 100%;
+  background: linear-gradient(to right, #7362ff, #f606cd);
+}
+
+div.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Sidebar links */
+div.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+div.sidebar a.active {
+  background-color: #ffffff;
+  /*color: white;*/
+}
+
+/* Links on mouse-over */
+div.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.content {
+  margin-left: 300px;
+  /*padding: 1px 16px;*/
+  height: 1000px;
+}
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+/*On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+/*calculator*/
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, #00AAFF, #00FF6C);
+}
+
+html {
+      box-sizing: border-box;
+    }
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: inherit;
+    }
+    .calculator {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      position: fixed;
+      top: 50%;
+      left: 60%;
+      transform: translate(-50%, -50%);
+      width: 400px;
+    }
+    .calculator-screen {
+      width: 100%;
+      height: 80px;
+      border: none;
+      background-color: #252525;
+      color: #fff;
+      text-align: right;
+      padding-right: 20px;
+      padding-left: 10px;
+      font-size: 4rem;
+    }
+    
+    .equal-sign {
+      height: 98%;
+      grid-area: 2 / 4 / 6 / 5;
+    }
+    .calculator-keys {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;
+      padding: 20px;
+    }
+
+  
